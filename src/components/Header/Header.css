@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff4d4d;
+  font-family: Arial, sans-serif;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+  font-weight: 500;
+}
