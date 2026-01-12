@@ -1,11 +1,12 @@
 import Banner from "../../components/Banner/Banner";
+import Gallery from "../../components/Gallery/Gallery";
 import "./Home.css";
 
 function Home() {
   return (
     <div className="home-container">
       <Banner></Banner>
-      <div className="home-gallery"></div>
+      <Gallery></Gallery>
     </div>
   );
 }

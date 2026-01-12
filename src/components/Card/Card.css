@@ -1,0 +1,20 @@
+.card-container {
+  background-color: #f6f6f6;
+  border-radius: 16px;
+  height: 829px;
+  margin: 0 50px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.card {
+  width: 340px;
+  height: 340px;
+  padding-left: 10px;
+  background-color: #ff4040;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
