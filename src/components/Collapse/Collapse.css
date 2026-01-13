@@ -1,0 +1,38 @@
+.collapse-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.collapse-title {
+  margin-bottom: 20px;
+}
+
+.collapse-header {
+  background-color: #ff6060;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapse-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+.collapse-content {
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+}
+
+.collapse-content p {
+  margin: 0;
+  color: #333;
+}
