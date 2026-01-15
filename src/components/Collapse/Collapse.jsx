@@ -1,19 +1,21 @@
-import collapse from "../../data/collapse.json";
+import { useState } from "react";
 import "../Collapse/Collapse.css";
 
-function Collapse() {
+function Collapse({ title, content }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="collapse-container">
-      {collapse.map((item) => (
-        <div className="collapse-item" key={item.id}>
-          <div className="collapse-title">
-            <h3>{item.title}</h3>
-          </div>
-          <div className="collapse-content">
-            <p>{item.content}</p>
-          </div>
-        </div>
-      ))}
+    <div className="collapse-item">
+      <button className="collapse-title" onClick={() => setIsOpen(!isOpen)}>
+        <h3>{title}</h3>
+        <span className={`collapse-arrow ${isOpen ? "open" : ""}`}>
+          <i className="fa-regular fa-angle-up"></i>
+        </span>
+      </button>
+
+      <div className={`collapse-content ${isOpen ? "open" : ""}`}>
+        {content}
+      </div>
     </div>
   );
 }
