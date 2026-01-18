@@ -1,0 +1,38 @@
+.collapse {
+  margin: 20px;
+  &-title {
+    position: relative;
+    border-radius: 15px;
+    background-color: #ff6060;
+    color: white;
+    border: none;
+    width: 1023px;
+    height: 52px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  &-arrow {
+    color: white;
+    transition: transform 0.3s ease;
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+  &-content {
+    background-color: #f6f6f6;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.4s ease,
+      padding 0.4s ease;
+    padding: 0 15px;
+    border-radius: 0 0 5px 5px;
+    &.open {
+      max-height: 500px;
+      padding: 15px;
+    }
+  }
+}

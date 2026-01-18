@@ -5,7 +5,7 @@ function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="collapse-item">
+    <div className="collapse">
       <button className="collapse-title" onClick={() => setIsOpen(!isOpen)}>
         <h3>{title}</h3>
         <span className={`collapse-arrow ${isOpen ? "open" : ""}`}>
