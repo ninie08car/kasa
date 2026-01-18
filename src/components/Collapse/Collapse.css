@@ -1,0 +1,36 @@
+.collapse {
+  margin: 20px;
+}
+.collapse-title {
+  position: relative;
+  border-radius: 15px;
+  background-color: #ff6060;
+  color: white;
+  border: none;
+  width: 1023px;
+  height: 52px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.collapse-arrow {
+  color: white;
+  transition: transform 0.3s ease;
+}
+.collapse-arrow.open {
+  transform: rotate(180deg);
+}
+.collapse-content {
+  background-color: #f6f6f6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 15px;
+  border-radius: 0 0 5px 5px;
+}
+.collapse-content.open {
+  max-height: 500px;
+  padding: 15px;
+}/*# sourceMappingURL=Collapse.css.map */
