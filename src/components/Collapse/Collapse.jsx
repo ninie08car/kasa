@@ -9,7 +9,7 @@ function Collapse({ title, content }) {
       <button className="collapse-title" onClick={() => setIsOpen(!isOpen)}>
         <h3>{title}</h3>
         <span className={`collapse-arrow ${isOpen ? "open" : ""}`}>
-          <i className="fa-regular fa-angle-up"></i>
+          <i className="fa-solid fa-chevron-up"></i>
         </span>
       </button>
 

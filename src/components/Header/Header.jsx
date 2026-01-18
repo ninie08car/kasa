@@ -26,6 +26,15 @@ function Header() {
           >
             À propos
           </NavLink>
+          <NavLink
+            to="*"
+            end
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Erreur 404
+          </NavLink>
         </nav>
       </div>
     </header>

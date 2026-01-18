@@ -16,9 +16,9 @@ function App() {
         {/* Route A Propos */}
         <Route path="/about" element={<About />} />
         {/* Route 404 */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="/*" element={<NotFound />} />
         {/* Route Logement */}
-        <Route path="logement" element={<Housing />} />
+        <Route path="/logement" element={<Housing />} />
       </Routes>
       <Footer />
     </>

@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
+import "./NotFound.scss";
+import img404 from "../../assets/404.png";
 
 function NotFound() {
   return (
     <div className="notfound-container">
-      <h3 className="notfound-title">404</h3>
+      <img src={img404} alt="Page non trouvée" />
       <p className="notfound-content">
         Oups! La page que vous demandez n'existe pas
       </p>
@@ -14,4 +16,4 @@ function NotFound() {
   );
 }
 
-export default NotFound();
+export default NotFound;
