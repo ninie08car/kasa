@@ -1,31 +1,59 @@
+import { useParams } from "react-router-dom";
+import { useState } from "react";
+import housings from "../../data/housing.json";
+import arrow_left from "../../assets/arrow_back.png";
+import arrow_right from "../../assets/arrow_forward.png";
 import "./Slideshow.css";
 
-function Slideshow({ pictures }) {
+function Slideshow() {
+  const { id } = useParams();
+  const housing = housings.find((item) => item.id === id);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const pictures = housing.pictures;
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === pictures.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? pictures.length - 1 : prev - 1));
+  };
+
   return (
     <div id="banner">
       <img
-        class="banner-img"
-        src="assets/images/slideshow/slide1.jpg"
-        alt="Banner Print-it"
+        src={pictures[currentIndex]}
+        alt={housing.title}
+        className="banner_img"
       />
-      <img
-        id="arrow_left"
-        class="arrow_left"
-        src="assets/images/arrow_left.png"
-        alt="Précédent"
-      />
-      <img
-        id="arrow_right"
-        class="arrow_right"
-        src="assets/images/arrow_right.png"
-        alt="Suivant"
-      />
-      <div class="dots">
-        <i id="slide1" class="fa-solid dot_selected fa-circle dot"></i>
-        <i id="slide2" class="fa-light fa-circle dot"></i>
-        <i id="slide3" class="fa-light fa-circle dot"></i>
-        <i id="slide4" class="fa-light fa-circle dot"></i>
-      </div>
+      {pictures.length > 1 && (
+        <div>
+          <img
+            className="arrow_left"
+            src={arrow_left}
+            alt="Précédent"
+            onClick={prevSlide}
+          />
+
+          <img
+            className="arrow_right"
+            src={arrow_right}
+            alt="Suivant"
+            onClick={nextSlide}
+          />
+
+          <div className="dots">
+            {pictures.map((_, index) => (
+              <span
+                key={index}
+                className={index === currentIndex ? "dot dot_selected" : "dot"}
+              ></span>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -5,7 +5,13 @@ import housings from "../../data/housing.json";
 
 function Housing() {
   const { id } = useParams();
+
   const housing = housings.find((item) => item.id === id);
+
+  if (!housing) {
+    return <Navigate to="/*" />;
+  }
+
   return (
     <div className="housing-container">
       <Slideshow pictures={housing.pictures}></Slideshow>
@@ -21,8 +27,7 @@ function Housing() {
       </div>
       <div>
         <div className="details"></div>
-        <div>
-          <i className="rating"></i>
+        <div className="rating">
           <i></i>
           <i></i>
           <i></i>
@@ -31,7 +36,13 @@ function Housing() {
       </div>
       <div className="collapses">
         <Collapse title="Description">{housing.description}</Collapse>
-        <Collapse title="Equipements"></Collapse>
+        <Collapse title="Equipements">
+          <ul>
+            {housing.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </div>
   );
