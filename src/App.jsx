@@ -15,10 +15,10 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* Route A Propos */}
         <Route path="/about" element={<About />} />
+        {/* Route Logement avec ID*/}
+        <Route path="/logement/:id" element={<Housing />} />
         {/* Route 404 */}
         <Route path="/*" element={<NotFound />} />
-        {/* Route Logement */}
-        <Route path="/logement" element={<Housing />} />
       </Routes>
       <Footer />
     </>

@@ -1,12 +1,15 @@
-import fiches from "../../data/fiches.json";
+import housing from "../../data/housing.json";
 import Card from "../../components/Card/Card";
 import "../Gallery/Gallery.css";
+import { Link } from "react-router-dom";
 
 function Gallery() {
   return (
     <div className="gallery-container">
-      {fiches.map((fiche) => (
-        <Card key={fiche.id} title={fiche.title} cover={fiche.cover}></Card>
+      {housing.map(({ id, title, cover }) => (
+        <Link key={id} to={`/logement/${id}`} className="card-link">
+          <Card title={title} cover={cover} />
+        </Link>
       ))}
     </div>
   );
