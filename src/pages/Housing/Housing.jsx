@@ -2,7 +2,7 @@ import { useParams, Navigate } from "react-router-dom";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Collapse from "../../components/Collapse/Collapse";
 import housings from "../../data/housing.json";
-
+import "./Housing.scss";
 function Housing() {
   const { id } = useParams();
 
@@ -15,19 +15,26 @@ function Housing() {
   return (
     <div className="housing-container">
       <Slideshow pictures={housing.pictures}></Slideshow>
-      <div className="description">
-        <div>
+      <div className="housing">
+        <div className="housing-content">
           <h1>{housing.title}</h1>
           <p>{housing.location}</p>
         </div>
-        <div className="host">
+        <div className="housing-host">
           <p>{housing.host.name}</p>
           <img src={housing.host.picture} alt={housing.host.name} />
         </div>
       </div>
       <div>
-        <div className="details"></div>
-        <div className="rating">
+        <div className="housing-tags">
+          <ul>
+            {housing.tags.map((tag, index) => (
+              <li key={index}>{tag}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="housing-rating">
           <i></i>
           <i></i>
           <i></i>

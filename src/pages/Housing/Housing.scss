@@ -1,0 +1,24 @@
+.housing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 50px;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    & h1 {
+      color: #ff4040;
+    }
+  }
+  &-host {
+    & p {
+      color: #ff4040;
+    }
+  }
+}
+.collapses {
+  display: grid;
+  gap: 20px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, 1fr);
+}
