@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./Header.css";
+import "./Header.scss";
 import logo from "../../assets/logoh.png";
 
 function Header() {
@@ -25,15 +25,6 @@ function Header() {
             }
           >
             À propos
-          </NavLink>
-          <NavLink
-            to="*"
-            end
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-          >
-            Erreur 404
           </NavLink>
         </nav>
       </div>

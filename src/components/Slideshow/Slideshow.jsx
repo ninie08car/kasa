@@ -3,7 +3,7 @@ import { useState } from "react";
 import housings from "../../data/housing.json";
 import arrow_left from "../../assets/arrow_back.png";
 import arrow_right from "../../assets/arrow_forward.png";
-import "./Slideshow.css";
+import "./Slideshow.scss";
 
 function Slideshow() {
   const { id } = useParams();

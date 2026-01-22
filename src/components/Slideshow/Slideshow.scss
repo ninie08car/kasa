@@ -34,16 +34,14 @@
   justify-content: center;
   gap: 10px;
   z-index: 2;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 50%;
-  opacity: 0.6;
-}
-
-.dot_selected {
-  opacity: 1;
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    &_selected {
+      opacity: 1;
+    }
+  }
 }

@@ -1,6 +1,6 @@
 import housing from "../../data/housing.json";
 import Card from "../../components/Card/Card";
-import "../Gallery/Gallery.css";
+import "../Gallery/Gallery.scss";
 import { Link } from "react-router-dom";
 
 function Gallery() {

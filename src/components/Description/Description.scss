@@ -15,6 +15,12 @@
       color: #ff4040;
     }
   }
+  &-rating i {
+    color: #e3e3e3;
+    &.active {
+      color: #ff6060;
+    }
+  }
 }
 .collapses {
   display: grid;
