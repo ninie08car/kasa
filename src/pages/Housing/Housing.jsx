@@ -3,6 +3,7 @@ import Slideshow from "../../components/Slideshow/Slideshow";
 import Collapse from "../../components/Collapse/Collapse";
 import HousingDescription from "../../components/Description/Description";
 import housings from "../../data/housing.json";
+import "./Housing.scss";
 
 function Housing() {
   const { id } = useParams();
@@ -13,7 +14,7 @@ function Housing() {
     <div className="housing-container">
       <Slideshow pictures={housing.pictures}></Slideshow>
       <HousingDescription></HousingDescription>
-      <div className="collapses">
+      <div className="housing-collapses">
         <Collapse title="Description">{housing.description}</Collapse>
         <Collapse title="Equipements">
           <ul>

@@ -3,28 +3,35 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0 50px;
-  &-content {
+  &-left {
     display: flex;
     flex-direction: column;
-    & h1 {
-      color: #ff4040;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      & h1 {
+        color: #ff4040;
+      }
     }
   }
-  &-host {
-    & p {
-      color: #ff4040;
+  &-right {
+    &-host {
+      & p {
+        color: #ff4040;
+      }
     }
-  }
-  &-rating i {
-    color: #e3e3e3;
-    &.active {
-      color: #ff6060;
+    &-rating i {
+      color: #e3e3e3;
+      &.active {
+        color: #ff6060;
+      }
     }
   }
 }
+
 .collapses {
-  display: grid;
-  gap: 20px;
-  box-sizing: border-box;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
 }
