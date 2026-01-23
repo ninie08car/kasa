@@ -1,30 +1,69 @@
 .housing {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
   margin: 0 50px;
-  &-left {
+  &-top {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    &-content {
+    align-items: center;
+    .housing-content {
+      h1 {
+        font-size: 36px;
+        font-weight: 400;
+        color: #ff6060;
+      }
+      p {
+        color: black;
+        font-size: 18px;
+      }
+    }
+    .housing-host {
       display: flex;
-      flex-direction: column;
-      & h1 {
-        color: #ff4040;
+      flex-direction: row;
+      gap: 10px;
+      p {
+        color: #ff6060;
+        font-size: 18px;
+      }
+      .round-container {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
-  &-right {
-    &-host {
-      & p {
-        color: #ff4040;
+  &-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .housing-tags {
+      display: flex;
+      gap: 10px;
+      .tag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ff6060;
+        color: white;
+        border-radius: 25px;
+        padding: 5px 15px;
+        font-size: 14px;
+        width: 115px;
+        height: 25px;
+        font-weight: bold;
       }
     }
-    &-rating i {
+    .housing-rating {
       color: #e3e3e3;
-      &.active {
+      .active {
         color: #ff6060;
       }
     }
