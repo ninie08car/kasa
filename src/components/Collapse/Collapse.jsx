@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../Collapse/Collapse.scss";
 
-function Collapse({ title, content }) {
+function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ function Collapse({ title, content }) {
       </button>
 
       <div className={`collapse-content ${isOpen ? "open" : ""}`}>
-        {content}
+        {children}
       </div>
     </div>
   );

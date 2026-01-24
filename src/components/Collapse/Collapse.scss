@@ -6,7 +6,7 @@
     color: white;
     border: none;
     height: 52px;
-    padding: 10px 15px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,19 +19,25 @@
     }
   }
   &-content {
-    background-color: #f6f6f6;
-    max-height: 0;
     overflow: hidden;
+    max-height: 0; // fermé
+    opacity: 0;
+    background-color: #f6f6f6;
+    border-radius: 0 0 15px 15px;
+    padding: 0 15px;
     transition:
       max-height 0.4s ease,
+      opacity 0.4s ease,
       padding 0.4s ease;
-    padding: 0 15px;
-    border-radius: 0 0 15px 15px;
-    opacity: 0;
+
     &.open {
-      max-height: 500px;
-      padding: 15px;
+      max-height: 500px; // doit être supérieur à ton contenu
+      padding: 10px 15px;
       opacity: 1;
+    }
+
+    > * {
+      margin: 0;
     }
   }
 }

@@ -9,16 +9,16 @@ function Housing() {
   const { id } = useParams();
 
   const housing = housings.find((item) => item.id === id);
+  const { pictures, description, equipments } = housing;
 
   return (
     <div className="housing-container">
-      <Slideshow pictures={housing.pictures}></Slideshow>
-      <HousingDescription></HousingDescription>
+      <Slideshow pictures={pictures} /> <HousingDescription />
       <div className="housing-collapses">
-        <Collapse title="Description">{housing.description}</Collapse>
+        <Collapse title="Description">{description}</Collapse>
         <Collapse title="Equipements">
           <ul>
-            {housing.equipments.map((equipment, index) => (
+            {equipments.map((equipment, index) => (
               <li key={index}>{equipment}</li>
             ))}
           </ul>
