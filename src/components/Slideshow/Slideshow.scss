@@ -45,3 +45,18 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  #banner {
+    height: 255px;
+    margin: 0 20px;
+  }
+  .arrow_left {
+    height: 24px;
+    left: 0;
+  }
+  .arrow_right {
+    height: 24px;
+    right: 0;
+  }
+}
