@@ -22,3 +22,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    &-container {
+      width: auto;
+      margin: 25px;
+      height: 46px;
+      & img {
+        width: 140px;
+      }
+    }
+  }
+}

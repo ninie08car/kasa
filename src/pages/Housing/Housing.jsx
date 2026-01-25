@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import Collapse from "../../components/Collapse/Collapse";
 import HousingDescription from "../../components/Description/Description";
@@ -7,8 +7,12 @@ import "./Housing.scss";
 
 function Housing() {
   const { id } = useParams();
-
   const housing = housings.find((item) => item.id === id);
+
+  if (!housing) {
+    return <Navigate to="/*" />;
+  }
+
   const { pictures, description, equipments } = housing;
 
   return (

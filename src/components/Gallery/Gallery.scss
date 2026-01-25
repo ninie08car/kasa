@@ -1,9 +1,8 @@
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: #f6f6f6;
+  background-color: grey;
   border-radius: 16px;
-  margin: 10px 50px;
-  padding: 30px;
   gap: 30px;
+  padding: 20px;
 }

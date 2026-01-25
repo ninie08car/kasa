@@ -1,6 +1,18 @@
+.about-container {
+  margin: 20px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
 .about-collapses {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin: 20px 100px;
+  margin: 20px 60px;
+}
+
+@media (max-width: 1023px) {
+  .about-container {
+    margin: 20px 20px;
+  }
 }
