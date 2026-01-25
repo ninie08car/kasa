@@ -6,3 +6,10 @@
   gap: 30px;
   padding: 20px;
 }
+
+@media (max-width: 425px) {
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

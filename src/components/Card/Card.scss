@@ -28,3 +28,15 @@
     }
   }
 }
+@media (max-width: 425px) {
+  .card-content {
+    & img {
+      height: 225px;
+    }
+    & h3 {
+      height: 30px;
+      font-size: 16px;
+      padding: 5px 8px;
+    }
+  }
+}
