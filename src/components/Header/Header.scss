@@ -27,11 +27,19 @@
   .header {
     &-container {
       width: auto;
-      margin: 25px;
+      margin: 25px 50px;
       height: 46px;
       & img {
         width: 140px;
       }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    &-container {
+      margin: 25px;
     }
   }
 }
