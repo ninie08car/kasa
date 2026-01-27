@@ -26,24 +26,16 @@
 .arrow_right {
   right: 20px;
 }
-.dots {
+
+.counter {
   position: absolute;
   bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
   z-index: 2;
-  .dot {
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.6;
-    &_selected {
-      opacity: 1;
-    }
-  }
 }
 
 @media (max-width: 425px) {

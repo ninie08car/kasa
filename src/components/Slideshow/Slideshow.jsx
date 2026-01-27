@@ -44,14 +44,11 @@ function Slideshow() {
             onClick={nextSlide}
           />
 
-          <div className="dots">
-            {pictures.map((_, index) => (
-              <span
-                key={index}
-                className={index === currentIndex ? "dot dot_selected" : "dot"}
-              ></span>
-            ))}
-          </div>
+          {pictures.length > 1 && (
+            <div className="counter">
+              {currentIndex + 1} / {pictures.length}
+            </div>
+          )}
         </div>
       )}
     </div>
