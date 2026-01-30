@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom";
 import housings from "../../data/housing.json";
+import Rating from "../../components/Rating/Rating.jsx";
 import "./Description.scss";
 
 function HousingDescription() {
   const { id } = useParams();
 
   const housing = housings.find((item) => item.id === id);
-  const { title, location, tags, host, rating } = housing;
+  const { title, location, tags, host } = housing;
 
   return (
     <div className="housing">
@@ -30,16 +31,7 @@ function HousingDescription() {
             <img src={host.picture} alt={host.name} />
           </div>
         </div>
-        <div className="housing-rating">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <i
-              key={star}
-              className={
-                star <= rating ? "fa-solid fa-star active" : "fa-solid fa-star"
-              }
-            ></i>
-          ))}
-        </div>
+        <Rating></Rating>
       </div>
     </div>
   );
