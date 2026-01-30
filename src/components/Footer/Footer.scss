@@ -11,6 +11,9 @@
     font-size: 24px;
   }
 }
+.mobile-break {
+  display: inline;
+}
 
 @media (max-width: 425px) {
   .footer-container {
@@ -23,5 +26,8 @@
     & p {
       text-align: center;
     }
+  }
+  .mobile-break {
+    display: block;
   }
 }

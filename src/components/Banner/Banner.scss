@@ -26,6 +26,10 @@
   white-space: pre-line;
 }
 
+.mobile-break {
+  display: inline;
+}
+
 @media (max-width: 425px) {
   .banner {
     height: 111px;
@@ -35,5 +39,8 @@
     font-size: 24px;
     margin-left: 12px;
     text-align: left;
+  }
+  .mobile-break {
+    display: block;
   }
 }

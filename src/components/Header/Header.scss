@@ -12,6 +12,7 @@
 .nav {
   display: flex;
   gap: 24px;
+  text-transform: none;
   &-link {
     text-decoration: none;
     color: #000;
@@ -41,5 +42,8 @@
     &-container {
       margin: 25px;
     }
+  }
+  .nav {
+    text-transform: uppercase;
   }
 }
