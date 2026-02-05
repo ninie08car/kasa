@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import housings from "../../data/housing.json";
-import Rating from "../../components/Rating/Rating.jsx";
+import Rating from "../../components/Rating/Rating";
 import "./Description.scss";
 
 function HousingDescription() {
   const { id } = useParams();
 
   const housing = housings.find((item) => item.id === id);
-  const { title, location, tags, host } = housing;
+  const { title, location, tags, host, rating } = housing;
 
   return (
     <div className="housing">
@@ -31,7 +31,7 @@ function HousingDescription() {
             <img src={host.picture} alt={host.name} />
           </div>
         </div>
-        <Rating></Rating>
+        <Rating rating={rating} />
       </div>
     </div>
   );

@@ -14,7 +14,8 @@ function Housing() {
   const { pictures, description, equipments } = housing;
   return (
     <div className="housing-container">
-      <Slideshow pictures={pictures} /> <HousingDescription />
+      <Slideshow pictures={pictures} />
+      <HousingDescription housing={housing} />
       <div className="housing-collapses">
         <Collapse title="Description">{description}</Collapse>
         <Collapse title="Equipements">

@@ -1,13 +1,6 @@
-import { useParams } from "react-router-dom";
-import housings from "../../data/housing.json";
 import "./Rating.scss";
 
-function Rating() {
-  const { id } = useParams();
-
-  const housing = housings.find((item) => item.id === id);
-  const { rating } = housing;
-
+function Rating({ rating }) {
   return (
     <div className="housing-rating">
       {[1, 2, 3, 4, 5].map((star) => (
