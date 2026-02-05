@@ -36,14 +36,12 @@ function Slideshow() {
             alt="Précédent"
             onClick={prevSlide}
           />
-
           <img
             className="arrow_right"
             src={arrow_right}
             alt="Suivant"
             onClick={nextSlide}
           />
-
           {pictures.length > 1 && (
             <div className="counter">
               {currentIndex + 1} / {pictures.length}
@@ -54,5 +52,4 @@ function Slideshow() {
     </div>
   );
 }
-
 export default Slideshow;

@@ -7,14 +7,14 @@
   padding: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 884px) {
   .gallery-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .gallery-container {
     display: flex;
     flex-direction: column;

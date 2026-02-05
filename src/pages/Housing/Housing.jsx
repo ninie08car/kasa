@@ -8,13 +8,10 @@ import "./Housing.scss";
 function Housing() {
   const { id } = useParams();
   const housing = housings.find((item) => item.id === id);
-
   if (!housing) {
     return <Navigate to="/*" />;
   }
-
   const { pictures, description, equipments } = housing;
-
   return (
     <div className="housing-container">
       <Slideshow pictures={pictures} /> <HousingDescription />
