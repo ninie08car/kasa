@@ -2,7 +2,7 @@
   width: 100%;
   &-container {
     height: 68px;
-    margin: 20px 50px;
+    margin: 20px 50px 0 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +40,7 @@
 @media (max-width: 600px) {
   .header {
     &-container {
-      margin: 25px;
+      margin: 25px 25px 0 25px;
     }
   }
   .nav {
