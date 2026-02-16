@@ -2,7 +2,7 @@
   position: relative;
   height: 415px;
   overflow: hidden;
-  margin: 0 50px;
+  margin: 20px 50px;
 }
 .banner_img {
   width: 100%;
@@ -41,7 +41,7 @@
 @media (max-width: 600px) {
   #banner {
     height: 255px;
-    margin: 0 20px;
+    margin: 20px 20px;
   }
   .arrow_left {
     height: 24px;
